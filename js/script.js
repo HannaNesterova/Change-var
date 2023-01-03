@@ -27,8 +27,8 @@ function playGame (playerInput) {
     const playerMove = getMoveName(Number(playerInput));
     // printMessage('Tвій рух :' + playerMove);
 
-    let argComputerMove = computerMove;
-    let argPlayerMove = playerMove;
+    const argComputerMove = computerMove;
+    const argPlayerMove = playerMove;
     function displayResult (argComputerMove , argPlayerMove){
         printMessage('Компютер обрав ' + argComputerMove + ', а ти обрав ' + argPlayerMove);
             if( argComputerMove === 'камінь' && argPlayerMove === 'папір'){
