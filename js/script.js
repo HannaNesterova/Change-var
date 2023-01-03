@@ -24,7 +24,7 @@ function playGame (playerInput) {
     // Player
 
     // let playerInput = prompt ('Вибери свій рух! 1 - це камінь, 2 - це папір, 3 - це ножиці');
-    let playerMove = getMoveName(Number(playerInput));
+    const playerMove = getMoveName(Number(playerInput));
     // printMessage('Tвій рух :' + playerMove);
 
     let argComputerMove = computerMove;
@@ -33,6 +33,7 @@ function playGame (playerInput) {
         printMessage('Компютер обрав ' + argComputerMove + ', а ти обрав ' + argPlayerMove);
             if( argComputerMove === 'камінь' && argPlayerMove === 'папір'){
                 printMessage('Вітаю, ти переміг!');
+                
             }
             else if( argComputerMove === 'ножиці' && argPlayerMove === 'камінь'){
                 printMessage('Вітаю, ти переміг!');
@@ -68,3 +69,30 @@ playPaper?.addEventListener('click', function () {
 playScissors?.addEventListener('click',function () {
     playGame (3)
 });
+
+const gameRules = {
+    "камінь" : {
+        "камінь" :  0,
+        "ножиці" : 1,  
+        "папір" : 0, //-1,
+     }, 
+    "ножниці" : {
+        "камінь" :  0,//-1,
+        "ножиці" : 0,  
+        "папір" : 1,
+    }, 
+    "папір" : {
+        "камінь" :  1,
+        "ножиці" : 0, //-1,  
+        "папір" : 0,
+    } 
+}
+
+let i =0;
+function countBills (){
+    if (argComputerMove === 'камінь' && argPlayerMove === 'папір'){
+        printBills('Вітаю, ти переміг!');
+        i++;
+    }
+    console.log(countBills)
+}
