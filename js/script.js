@@ -2,8 +2,10 @@
 
 
 
-let myBills = 0;
-let compBills = 0;
+let myBills = 1;
+
+let compBills = 1;
+
 
 
 function playGame (playerInput) {
