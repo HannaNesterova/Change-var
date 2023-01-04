@@ -66,32 +66,3 @@ playPaper?.addEventListener('click', function () {
 playScissors?.addEventListener('click',function () {
     playGame (3)
 });
-
-
-
-//COUNT BILLS
-// const gameRules = {
-//     "камінь" : {
-//         "камінь" :  0,
-//         "ножиці" : 1,  
-//         "папір" : 0, //-1,
-//      }, 
-//     "ножниці" : {
-//         "камінь" :  0,//-1,
-//         "ножиці" : 0,  
-//         "папір" : 1,
-//     }, 
-//     "папір" : {
-//         "камінь" :  1,
-//         "ножиці" : 0, //-1,  
-//         "папір" : 0,
-//     } 
-// }
-
-// let i =0;
-// function countBills (){
-//     if (argComputerMove === 'камінь' && argPlayerMove === 'папір'){
-//         printBills('Вітаю, ти переміг!');
-//         i++;
-//     }
-// }
