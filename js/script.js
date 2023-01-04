@@ -1,8 +1,8 @@
 // Computer choises
 function playGame (playerInput) {
     clearMessages();
-    let roundNumber = Math.floor(Math.random() * 3 + 1);
-    let computerMove = getMoveName(roundNumber);
+    const roundNumber = Math.floor(Math.random() * 3 + 1);
+    const computerMove = getMoveName(roundNumber);
 
     function getMoveName(argMoveId){
         if (argMoveId === 1){
@@ -18,15 +18,8 @@ function playGame (playerInput) {
             alert('Використовуй цифри')
         )
     }
-
-    // printMessage('Рух компютера: ' + computerMove);
-
     // Player
-
-    // let playerInput = prompt ('Вибери свій рух! 1 - це камінь, 2 - це папір, 3 - це ножиці');
     const playerMove = getMoveName(Number(playerInput));
-    // printMessage('Tвій рух :' + playerMove);
-
     const argComputerMove = computerMove;
     const argPlayerMove = playerMove;
     function displayResult (argComputerMove , argPlayerMove){
@@ -49,7 +42,6 @@ function playGame (playerInput) {
             }
         }
         displayResult (argComputerMove , argPlayerMove);
-        console.log(playGame);
 }
 
 // playGame( );
@@ -94,5 +86,4 @@ function countBills (){
         printBills('Вітаю, ти переміг!');
         i++;
     }
-    console.log(countBills)
 }
