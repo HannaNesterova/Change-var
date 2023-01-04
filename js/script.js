@@ -35,19 +35,19 @@ function playGame (playerInput) {
     function displayResult (argComputerMove , argPlayerMove){
         printMessage('Компютер обрав ' + argComputerMove + ', а ти обрав ' + argPlayerMove);
             if( argComputerMove === 'камінь' && argPlayerMove === 'папір'){
-                printMessage('Вітаю, ти переміг! Твої бали : ' + myBills+1);
+                printMessage('Вітаю, ти переміг! Твої бали : ' + myBills++);
             }
             else if( argComputerMove === 'ножиці' && argPlayerMove === 'камінь'){
-                printMessage('Вітаю, ти переміг!Твої бали : '+ myBills+1);
+                printMessage('Вітаю, ти переміг!Твої бали : '+ myBills++);
             }
             else if( argComputerMove === 'папір' && argPlayerMove === 'ножиці'){
-            printMessage('Вітаю, ти переміг!Твої бали :'+ myBills+1);
+            printMessage('Вітаю, ти переміг!Твої бали :'+ myBills++);
             }
             else if( argComputerMove === 'папір' && argPlayerMove === 'папір' || computerMove === 'ножиці' && playerMove === 'ножиці' || computerMove === 'камінь' && playerMove === 'камінь'){
             printMessage('Нечія,спробуйте ще раз.');
             }
             else{
-            printMessage('Нажаль ти програв,спробуйте ще...Бали компютера : ' + compBills+1);
+            printMessage('Нажаль ти програв,спробуйте ще...Бали компютера : ' + compBills++);
             }
         }
         displayResult (argComputerMove , argPlayerMove);
